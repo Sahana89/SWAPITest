@@ -24,9 +24,9 @@ public class APICall {
     public APIResponse getResponseForUrl(final String term, final String searchTerm) {
 
         final APIResponse apiResponse = new APIResponse();
-        final HttpClient httpClient = HttpClient.newHttpClient();
         final HttpRequest request = HttpRequest.newBuilder(APICALL_UTILS.createURL(term, searchTerm)).GET().build();
         try {
+            final HttpClient httpClient = HttpClient.newHttpClient();
             final HttpResponse<InputStream> response = httpClient.send(request,
                     HttpResponse.BodyHandlers.ofInputStream());
 
@@ -34,7 +34,7 @@ public class APICall {
 
             final BufferedReader in = new BufferedReader(new InputStreamReader(response.body()));
             String inputLine;
-            final StringBuffer responseBody = new StringBuffer();
+            final StringBuilder responseBody = new StringBuilder();
             while ((inputLine = in.readLine()) != null) {
                 responseBody.append(inputLine);
             }

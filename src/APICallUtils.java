@@ -32,9 +32,8 @@ public class APICallUtils {
         } else {
             final String SEARCH = "search";
             try {
-                final URI uri = new URIBuilder(BASE_URL + term).addParameter(SEARCH, searchTerm)
+                return new URIBuilder(BASE_URL + term).addParameter(SEARCH, searchTerm)
                         .build();
-                return uri;
             } catch (URISyntaxException e) {
                 throw new RuntimeException(e);
             }
