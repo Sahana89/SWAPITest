@@ -23,7 +23,7 @@ maintained within tools such as Test Rail etc.
 
 The package will need to be unzipped and imported into Intellij or similar IDE (Supports java).
 Follow the below steps to import the package into Intellij
-    1. Unzip the folder in location within an laptop.
+    1. Pull the project from github repository.
     2. Use File --> New --> Import from Existing Sources
     3. Select an applicable JDK(Preferably JAVA 11 and onwards).
     4. Keep rest of selection as default.
