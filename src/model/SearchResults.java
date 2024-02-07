@@ -8,7 +8,5 @@ import com.google.gson.JsonArray;
  */
 public class SearchResults {
     public int count;
-    String next;
-    String prev;
     public JsonArray results;
 }
